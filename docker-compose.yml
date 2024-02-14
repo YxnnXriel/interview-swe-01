@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  thirdparty:
+    build: ./thirdpartymock
+    ports:
+      - "3000:3000"
+
+  client:
+    build: ./client
+    environment:
+      YOUR_API: "http://thirdparty:3000" # replace with your new API
+    ports:
+      - "3100:3100"
