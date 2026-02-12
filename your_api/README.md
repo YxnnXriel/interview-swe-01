@@ -19,3 +19,4 @@ Sequence diagrams are encouraged to describe your chosen approach, other than th
 ### Working solution
 
 ⚠️ The whole stack needs to work with the command: `docker-compose up -d`. You are expected to update the Dockerfiles and the docker-compose file according to the requirements of your solution. For instance, if you need an SQL script to be ran against a database, it needs to be done automatically without human intervention.
+

